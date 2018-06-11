@@ -1,0 +1,17 @@
+menuconfig EXTERN
+	bool "skycaster external driver support"
+	depends on HAS_IOMEM && OF
+	help
+		Skycaster Driver Support
+
+if EXTERN
+
+config DEBUG
+	bool "enable debug message"
+
+config AXIDMA
+	tristate "xilinx axidma driver"
+	help
+		This is the xilinx axidma driver. Uses DMA.
+
+endif # EXTERN
